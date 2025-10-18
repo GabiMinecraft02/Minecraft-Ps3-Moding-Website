@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PS3 Minecraft Moding Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- 🎬 Fond vidéo -->
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='bg.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <h1>Welcome to the PS3 Minecraft Moding Website!</h1>
+        <p>
+            Download the best backups and mods of Minecraft PS3.<br>
+            If you have a backup, contact me on Discord: <b>GabiMinecraft02</b><br>
+            or on YouTube: 
+            <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">GabiMinecraft02</a>.<br>
+            or on TikTok: 
+            <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">GabiMinecraft02</a>.<br>
+            or on Snapchat: 
+            <a href="https://snapchat.com/t/sS6oPOiV" target="_blank">GabiMinecraft02</a>.
+        </p>
+    </header>
+
+    <main>
+        <h2>Moding Categories</h2>
+
+        <div class="category">
+            <button class="main-btn">Wanters Moding</button>
+            <div class="submenu">
+                <button class="sub-btn">PKG Backup</button>
+                <div class="submenu">
+                    <button disabled>Wanters V1 (coming soon)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <button class="main-btn">Baka Moding</button>
+            <div class="submenu">
+                <button class="sub-btn">PKG Backup</button>
+                <div class="submenu">
+                    <button disabled>Baka V1 (coming soon)</button>
+                    <button disabled>Baka V2 (coming soon)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <button class="main-btn">Las Moding</button>
+            <div class="submenu">
+                <button class="sub-btn">PKG Backup</button>
+                <div class="submenu">
+                    <button disabled>Las V1 (coming soon)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <a href="https://azeydev.github.io/Kagura-Website/download.html" target="_blank">
+                <button class="main-btn">azeY Moding</button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 GabiMinecraft02 | 
+        <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">YouTube</a> | Discord: GabiMinecraft02
+    </footer>
+
+    <script>
+        // Cacher les sous-menus au départ
+        document.querySelectorAll('.submenu').forEach(sub => sub.style.display = 'none');
+
+        // Toggle boutons principaux
+        document.querySelectorAll('.main-btn').forEach(mainBtn => {
+            mainBtn.addEventListener('click', () => {
+                const submenu = mainBtn.nextElementSibling;
+                submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+            });
+        });
+
+        // Toggle sous-boutons
+        document.querySelectorAll('.sub-btn').forEach(subBtn => {
+            subBtn.addEventListener('click', () => {
+                const submenu = subBtn.nextElementSibling;
+                submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+            });
+        });
+    </script>
+</body>
+</html>
