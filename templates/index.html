@@ -11,13 +11,10 @@
         <h1>Welcome to the PS3 Minecraft Moding Website!</h1>
         <p>
             Download the best backups and mods of Minecraft PS3.<br>
-            If you have a backup, contact me on Discord: <b>GabiMinecraft02</b><br>
-            or on YouTube:
-            <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">GabiMinecraft02</a>.<br>
-            or on TikTok:
-            <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">GabiMinecraft02</a>.<br>
-            or on Snapchat:
-            <a href="https://snapchat.com/t/sS6oPOiV" target="_blank">GabiMinecraft02</a>.
+            Contact on Discord: <b>GabiMinecraft02</b><br>
+            YouTube: <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">GabiMinecraft02</a><br>
+            TikTok: <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">GabiMinecraft02</a><br>
+            Snapchat: <a href="https://snapchat.com/t/sS6oPOiV" target="_blank">GabiMinecraft02</a>
         </p>
     </header>
 
@@ -29,7 +26,7 @@
             <div class="submenu">
                 <button class="sub-btn">Backup</button>
                 <div class="submenu">
-                    <button disabled>Wanters V1 (coming soon)</button>
+                    <button class="download-btn" disabled>Wanters V1 (coming soon)</button>
                 </div>
             </div>
         </div>
@@ -42,7 +39,7 @@
                     <a href="https://www.mediafire.com/..." target="_blank">
                         <button class="download-btn">Baka V1</button>
                     </a>
-                    <button disabled>Baka V2 (coming soon)</button>
+                    <button class="download-btn" disabled>Baka V2 (coming soon)</button>
                 </div>
             </div>
         </div>
@@ -52,14 +49,14 @@
             <div class="submenu">
                 <button class="sub-btn">Backup</button>
                 <div class="submenu">
-                    <button disabled>Las V1 (coming soon)</button>
+                    <button class="download-btn" disabled>Las V1 (coming soon)</button>
                 </div>
             </div>
         </div>
 
         <div class="category">
             <a href="https://azeydev.github.io/Kagura-Website/download.html" target="_blank">
-                <button class="main-btn">azeY Moding</button>
+                <button class="main-btn special-btn">azeY Moding</button>
             </a>
         </div>
     </main>
@@ -69,10 +66,10 @@
     </footer>
 
     <script>
-        // Hide submenus by default
+        // Masquer tous les sous-menus par défaut
         document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
 
-        // Toggle main buttons
+        // Toggle boutons principaux
         document.querySelectorAll('.main-btn').forEach(b => {
             b.addEventListener('click', () => {
                 const s = b.nextElementSibling;
@@ -81,7 +78,7 @@
             });
         });
 
-        // Toggle sub buttons
+        // Toggle sous-boutons
         document.querySelectorAll('.sub-btn').forEach(b => {
             b.addEventListener('click', () => {
                 const s = b.nextElementSibling;
@@ -92,4 +89,3 @@
     </script>
 </body>
 </html>
-
