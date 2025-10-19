@@ -1,104 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS3 Minecraft Moding Website</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Download the best Minecraft PS3 backups, mods and custom worlds. Created by GabiMinecraft02.">
-    <meta name="keywords" content="minecraft ps3, ps3 backup, ps3 moding, ps3 mods, minecraft mods, minecraft ps3 worlds, mod menu, custom worlds">
-    <meta name="author" content="GabiMinecraft02">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PS3 Minecraft Moding</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <header>
+        <h1>Welcome to the PS3 Minecraft Moding Website!</h1>
+        <p>
+            Download the best backups and mods of Minecraft PS3.<br>
+            If you have a backup, contact me on Discord: <b>GabiMinecraft02</b><br>
+            or on YouTube:
+            <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">GabiMinecraft02</a>.<br>
+            or on TikTok:
+            <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">GabiMinecraft02</a>.<br>
+            or on Snapchat:
+            <a href="https://snapchat.com/t/sS6oPOiV" target="_blank">GabiMinecraft02</a>.
+        </p>
+    </header>
 
-    <!-- 🎬 Fond vidéo -->
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
-    </video>
+    <main>
+        <h2>Moding Categories</h2>
 
-    <div class="content">
-        <header>
-            <h1>Welcome to the PS3 Minecraft Moding Website!</h1>
-            <p>
-                Download the best backups and mods of Minecraft PS3.<br>
-                Contact me on Discord: <b>GabiMinecraft02</b><br>
-                or on YouTube: 
-                <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">@GabiMinecraft02ps3</a><br>
-                or on TikTok: 
-                <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">@GabiMinecraft028</a><br>
-                or on Snapchat: 
-                <a href="https://snapchat.com/t/sS6oPOiV" target="_blank">@GabiMinecraft02</a>
-            </p>
-        </header>
-
-        <main>
-            <h2>Moding Categories</h2>
-
-            <div class="category">
-                <button class="main-btn">Wanters Moding</button>
+        <div class="category">
+            <button class="main-btn">Wanters Moding</button>
+            <div class="submenu">
+                <button class="sub-btn">Backup</button>
                 <div class="submenu">
-                    <button class="sub-btn">Backup</button>
-                    <div class="submenu">
-                        <button disabled>Wanters V1 (coming soon)</button>
-                    </div>
+                    <button disabled>Wanters V1 (coming soon)</button>
                 </div>
             </div>
+        </div>
 
-            <div class="category">
-                <button class="main-btn">Baka Moding</button>
+        <div class="category">
+            <button class="main-btn">Baka Moding</button>
+            <div class="submenu">
+                <button class="sub-btn">Backup</button>
                 <div class="submenu">
-                    <button class="sub-btn">Backup</button>
-                    <div class="submenu">
-                        <button onclick="window.open('https://www.mediafire.com/...', '_blank')">Baka V1</button>
-                        <button disabled>Baka V2 (coming soon)</button>
-                    </div>
+                    <a href="https://www.mediafire.com/..." target="_blank">
+                        <button class="download-btn">Baka V1</button>
+                    </a>
+                    <button disabled>Baka V2 (coming soon)</button>
                 </div>
             </div>
+        </div>
 
-            <div class="category">
-                <button class="main-btn">Las Moding</button>
+        <div class="category">
+            <button class="main-btn">Las Moding</button>
+            <div class="submenu">
+                <button class="sub-btn">Backup</button>
                 <div class="submenu">
-                    <button class="sub-btn">Backup</button>
-                    <div class="submenu">
-                        <button disabled>Las V1 (coming soon)</button>
-                    </div>
+                    <button disabled>Las V1 (coming soon)</button>
                 </div>
             </div>
+        </div>
 
-            <div class="category">
-                <button class="main-btn">AzeY Moding</button>
-                <div class="submenu">
-                    <button onclick="window.open('https://azeydev.github.io/Kagura-Website/download.html', '_blank')">Visit AzeY Moding Website</button>
-                </div>
-            </div>
-        </main>
+        <div class="category">
+            <a href="https://azeydev.github.io/Kagura-Website/download.html" target="_blank">
+                <button class="main-btn">azeY Moding</button>
+            </a>
+        </div>
+    </main>
 
-        <footer>
-            2025 © GabiMinecraft02 - All rights reserved
-        </footer>
-    </div>
+    <footer>
+        &copy; 2025 GabiMinecraft02 | <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">YouTube</a> | Discord: GabiMinecraft02
+    </footer>
 
     <script>
-        // Cache les sous-menus au départ
+        // Hide submenus by default
         document.querySelectorAll('.submenu').forEach(s => s.style.display = 'none');
 
-        // Affiche/masque les sous-menus
+        // Toggle main buttons
         document.querySelectorAll('.main-btn').forEach(b => {
             b.addEventListener('click', () => {
                 const s = b.nextElementSibling;
+                if (!s) return;
                 s.style.display = (s.style.display === 'flex') ? 'none' : 'flex';
             });
         });
 
+        // Toggle sub buttons
         document.querySelectorAll('.sub-btn').forEach(b => {
             b.addEventListener('click', () => {
                 const s = b.nextElementSibling;
+                if (!s) return;
                 s.style.display = (s.style.display === 'flex') ? 'none' : 'flex';
             });
         });
     </script>
 </body>
 </html>
+
