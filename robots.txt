@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://minecraft-ps3-moding-website.onrender.com/sitemap.xml
