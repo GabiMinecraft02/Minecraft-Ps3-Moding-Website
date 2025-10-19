@@ -1,5 +1,13 @@
-/* ===== Fond vidéo ===== */
-video.background-video {
+/* === RESET GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === FOND VIDÉO === */
+#bg-video {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,89 +17,104 @@ video.background-video {
   z-index: -1;
 }
 
-/* Image de secours sur mobile */
-@media (max-width: 768px) {
-  video.background-video {
-    display: none;
-  }
-
-  body {
-    background: url('bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-}
-
-/* ===== Styles généraux ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ===== Header ===== */
-header {
-  margin-top: 50px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  align-self: center;
-}
-
-header a {
-  color: #00b7ff;
-  text-decoration: none;
-}
-header a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Catégories ===== */
-main {
-  margin-top: 30px;
-  flex: 1;
-}
-
-.category {
-  margin: 15px auto;
-}
-
-.main-btn, .sub-btn, .submenu button {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid #00b7ff;
-  color: white;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.main-btn:hover, .sub-btn:hover, .submenu button:hover {
-  background-color: #00b7ff;
-  color: black;
-}
-
-/* Sous-menus */
-.submenu {
+/* === CONTENU CENTRAL === */
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4); /* léger voile pour lisibilité */
+  padding: 20px;
 }
 
-/* ===== Footer ===== */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
+/* === TITRE === */
+h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #000;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  text-shadow: 0 0 6px #000;
+}
+
+/* === TEXTE ET LIENS === */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #66e0ff;
+  text-decoration: underline;
+}
+
+/* === BOUTONS PRINCIPAUX === */
+button {
+  background: linear-gradient(135deg, #00aaff, #0066ff);
+  border: none;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #66ccff, #3388ff);
+  transform: scale(1.05);
+}
+
+/* === STRUCTURE DES MENUS === */
+.category {
+  margin-bottom: 20px;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === FOOTER === */
+footer {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* === ADAPTATION MOBILE === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    width: 80%;
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
