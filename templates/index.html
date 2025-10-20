@@ -1,193 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ✅ Titre clair et descriptif -->
-    <title>PS3 Minecraft Modding Website - Backups & Tools</title>
-
-    <!-- ✅ Description pour Google -->
-    <meta name="description" content="Download the best Minecraft PS3 backups, mods, and tools. Join GabiMinecraft02 on Discord, YouTube, TikTok, and Snapchat for PS3 modding help and tutorials.">
-
-    <!-- ✅ Autoriser Google à indexer -->
-    <meta name="robots" content="index, follow">
-
-    <!-- ✅ Lien canonique (important pour le référencement) -->
-    <link rel="canonical" href="https://tonapp.onrender.com/">
-
-    <!-- ✅ Icône (optionnel si tu en as une) -->
-    <!-- <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}"> -->
-
-    <!-- ✅ Feuille de style -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS3 Minecraft Modding Website - Backups & Tools</title>
+<meta name="description" content="Download the best Minecraft PS3 backups, mods, and tools. Join GabiMinecraft02 on Discord, YouTube, TikTok, and Snapchat for PS3 modding help and tutorials.">
+<link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- 🎬 Fond vidéo -->
-    <video autoplay muted loop id="bg-video">
-        <source src="{{ url_for('static', filename='bg.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
-    <header>
-        <h1>Welcome to the PS3 Minecraft Modding Website!</h1>
-        <p>
-            Download the best backups and mods for Minecraft PS3.<br>
-            If you have a backup, contact me on Discord: <b>GabiMinecraft02</b><br>
-            or on YouTube: 
-            <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">GabiMinecraft02</a>.<br>
-            or on TikTok: 
-            <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">GabiMinecraft02</a>.<br>
-            or on Snapchat: 
-            <a href="http://snapchat.com/t/sS6oPOiV" target="_blank">GabiMinecraft02</a>.
-        </p>
-    </header>
+<!-- 🎬 Fond vidéo -->
+<video autoplay muted loop id="bg-video">
+    <source src="/static/bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
-    <main>
-	<h2>servers</h2>
+<header>
+    <h1>Welcome to the PS3 Minecraft Modding Website!</h1>
+    <p>
+        Download the best backups and mods for Minecraft PS3.<br>
+        Contact me on Discord: <b>GabiMinecraft02</b><br>
+        YouTube: <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">GabiMinecraft02</a><br>
+        TikTok: <a href="https://www.tiktok.com/@gabiminecraft028?is_from_webapp=1&sender_device=pc" target="_blank">GabiMinecraft02</a><br>
+        Snapchat: <a href="http://snapchat.com/t/sS6oPOiV" target="_blank">GabiMinecraft02</a>
+    </p>
+</header>
 
-	<div class="category">
-            <a href="https://discord.gg/ex8Jgrm255" target="_blank">
-                <button class="main-btn">dicord</button>
-            </div>
-        </div>
+<main id="main-section">
+    <h2>Servers</h2>
+    <div class="category">
+        <a href="https://discord.gg/ex8Jgrm255" target="_blank" class="main-btn">Discord</a>
+    </div>
+    <div class="category">
+        <a href="https://snapchat.com/t/NuFjoBx" target="_blank" class="main-btn">Snapchat</a>
     </div>
 
-	<div class="category">
-            <a href="https://snapchat.com/t/NuFjoBx" target="_blank">
-                <button class="main-btn">snapchat</button>
-            </a>
-        </div>
-
-        <h2>Jailbreak</h2>
-
-        <div class="category">
-            <a href="https://www.mediafire.com/folder/rn6ihxhulric4/PS3" target="_blank">
-                <button class="main-btn">Hybrid Firmware</button>
-            </div>
-        </div>
+    <h2>Explore</h2>
+    <div class="category">
+        <button class="main-btn" onclick="showSection('jailbreak')">Jailbreak</button>
     </div>
-
-        <div class="category">
-            <a href="https://www.psx-place.com/forums/ps3-news.68/" target="_blank">
-                <button class="main-btn">PSX Place</button>
-            </div>
-        </div>
+    <div class="category">
+        <button class="main-btn" onclick="showSection('modding')">Modding</button>
     </div>
+</main>
 
-        <div class="category">
-            <a href="https://apunkagames.click/brewology/" target="_blank">
-                <button class="main-btn">brewlogy</button>
-            </div>
-        </div>
+<!-- Section Jailbreak -->
+<section id="jailbreak-section" class="hidden-section">
+    <button class="main-btn" onclick="hideSection('jailbreak')">← Retour</button>
+    <h2>Jailbreak</h2>
+    <div class="category">
+        <p>Ton explication 1</p>
+        <a href="ton lien 1" target="_blank" class="main-btn">Nom du bouton 1</a>
     </div>
-
-        <div class="category">
-            <a href="https://store.brewology.com/ahomebrew.php?brewid=310" target="_blank">
-                <button class="main-btn">webman mod</button>
-            </div>
-        </div>
+    <div class="category">
+        <p>Ton explication 2</p>
+        <a href="ton lien 2" target="_blank" class="main-btn">Nom du bouton 2</a>
     </div>
-
-        <div class="category">
-            <a href="https://store.brewology.com/ahomebrew.php?brewid=24" target="_blank">
-                <button class="main-btn">multiman</button>
-            </div>
-        </div>
+    <div class="category">
+        <p>Ton explication 3</p>
+        <a href="ton lien 3" target="_blank" class="main-btn">Nom du bouton 3</a>
     </div>
-
-        <div class="category">
-            <a href="https://store.brewology.com/ahomebrew.php?brewid=321" target="_blank">
-                <button class="main-btn">appolo save tools</button>
-            </div>
-        </div>
+    <div class="category">
+        <p>Ton explication 4</p>
+        <a href="ton lien 4" target="_blank" class="main-btn">Nom du bouton 4</a>
     </div>
-
-        <div class="category">
-            <a href="https://store.brewology.com/ahomebrew.php?brewid=244" target="_blank">
-                <button class="main-btn">PSN patch</button>
-            </div>
-        </div>
+    <div class="category">
+        <p>Ton explication 5</p>
+        <a href="ton lien 5" target="_blank" class="main-btn">Nom du bouton 5</a>
     </div>
-
-        <div class="category">
-            <a href="https://store.brewology.com/ahomebrew.php?brewid=320" target="_blank">
-                <button class="main-btn">pkgi PS3</button>
-            </div>
-        </div>
+    <div class="category">
+        <p>Ton explication 6</p>
+        <a href="ton lien 6" target="_blank" class="main-btn">Nom du bouton 6</a>
     </div>
-
-        <div class="category">
-            <a href="https://www.mediafire.com/folder/tzpnv636xkhts/Zukosrore" target="_blank">
-                <button class="main-btn">zukostore no viruses</button>
-            </div>
-        </div>
+    <div class="category">
+        <p>Ton explication 7</p>
+        <a href="ton lien 7" target="_blank" class="main-btn">Nom du bouton 7</a>
     </div>
+    <div class="category">
+        <p>Ton explication 8</p>
+        <a href="ton lien 8" target="_blank" class="main-btn">Nom du bouton 8</a>
+    </div>
+    <div class="category">
+        <p>Ton explication 9</p>
+        <a href="ton lien 9" target="_blank" class="main-btn">Nom du bouton 9</a>
+    </div>
+</section>
 
-        <h2>Modding Categories</h2>
+<!-- Section Modding -->
+<section id="modding-section" class="hidden-section">
+    <button class="main-btn" onclick="hideSection('modding')">← Retour</button>
+    <h2>Modding Categories</h2>
 
-        <div class="category">
-            <button class="main-btn">Wanters Modding</button>
+    <div class="category">
+        <button class="main-btn sub-toggle">Wanters Modding</button>
+        <div class="submenu">
+            <button class="sub-btn">Backup</button>
             <div class="submenu">
-                <button class="sub-btn">Backup</button>
-                <div class="submenu">
-                    <button disabled>Wanters V1 (coming soon)</button>
-                </div>
+                <button disabled>Wanters V1 (coming soon)</button>
             </div>
         </div>
+    </div>
 
-        <div class="category">
-            <button class="main-btn">Baka Modding</button>
+    <div class="category">
+        <button class="main-btn sub-toggle">Baka Modding</button>
+        <div class="submenu">
+            <button class="sub-btn">Backup</button>
             <div class="submenu">
-                <button class="sub-btn">Backup</button>
-                <div class="submenu">
-                    <button disabled>Baka V1 (coming soon)</button>
-                    <button disabled>Baka V2 (coming soon)</button>
-                </div>
+                <button disabled>Baka V1 (coming soon)</button>
+                <button disabled>Baka V2 (coming soon)</button>
             </div>
         </div>
+    </div>
 
-        <div class="category">
-            <button class="main-btn">Las Modding</button>
+    <div class="category">
+        <button class="main-btn sub-toggle">Las Modding</button>
+        <div class="submenu">
+            <button class="sub-btn">Backup</button>
             <div class="submenu">
-                <button class="sub-btn">Backup</button>
-                <div class="submenu">
-                    <button disabled>Las V1 (coming soon)</button>
-                </div>
+                <button disabled>Las V1 (coming soon)</button>
             </div>
         </div>
+    </div>
 
-        <div class="category">
-            <a href="https://azeydev.github.io/Kagura-Website/download.html" target="_blank">
-                <button class="main-btn">azeY Modding</button>
-            </a>
-        </div>
-    </main>
+    <div class="category">
+        <a href="https://azeydev.github.io/Kagura-Website/download.html" target="_blank" class="main-btn">azeY Modding</a>
+    </div>
+</section>
 
-    <footer>
-        &copy; 2025 GabiMinecraft02 | 
-        <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">YouTube</a> | Discord: GabiMinecraft02
-    </footer>
+<footer>
+    &copy; 2025 GabiMinecraft02 | 
+    <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">YouTube</a> | Discord: GabiMinecraft02
+</footer>
 
-    <script>
-        // Cacher les sous-menus au départ
-        document.querySelectorAll('.submenu').forEach(sub => sub.style.display = 'none');
+<script>
+// Afficher la section sélectionnée et cacher le reste
+function showSection(sectionId) {
+    document.getElementById('main-section').style.display = 'none';
+    document.getElementById(sectionId + '-section').style.display = 'block';
+}
 
-        // Toggle boutons principaux
-        document.querySelectorAll('.main-btn').forEach(mainBtn => {
-            mainBtn.addEventListener('click', () => {
-                const submenu = mainBtn.nextElementSibling;
-                if (submenu) submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
-            });
-        });
+// Retour à la page principale
+function hideSection(sectionId) {
+    document.getElementById(sectionId + '-section').style.display = 'none';
+    document.getElementById('main-section').style.display = 'block';
+}
 
-        // Toggle sous-boutons
-        document.querySelectorAll('.sub-btn').forEach(subBtn => {
-            subBtn.addEventListener('click', () => {
-                const submenu = subBtn.nextElementSibling;
-                if (submenu) submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
-            });
-        });
-    </script>
+// Toggle sous-menus dans Modding
+document.querySelectorAll('.sub-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const submenu = btn.nextElementSibling;
+        if(submenu) submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+    });
+});
+
+// Toggle sous-sous-menus
+document.querySelectorAll('.sub-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const submenu = btn.nextElementSibling;
+        if(submenu) submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+    });
+});
+</script>
+
 </body>
 </html>
