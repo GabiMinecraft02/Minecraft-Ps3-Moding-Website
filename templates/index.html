@@ -174,40 +174,45 @@
         <a href="https://www.youtube.com/@GabiMinecraft02ps3" target="_blank">YouTube</a> | Discord: GabiMinecraft02
     </footer>
 
-    <script>
-        // 🔹 Changer de section
-        function showSection(id) {
-            document.getElementById('main-menu').classList.add('hidden');
-            document.getElementById(id).classList.remove('hidden');
-        }
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 🔹 Afficher une section (Jailbreak ou Modding)
+    window.showSection = function(id) {
+        document.getElementById("main-menu").classList.add("hidden");
+        document.getElementById(id).classList.remove("hidden");
+    };
 
-        // 🔙 Retour à l’accueil
-        function goBack() {
-            document.querySelectorAll('#jailbreak-section, #modding-section').forEach(sec => sec.classList.add('hidden'));
-            document.getElementById('main-menu').classList.remove('hidden');
-        }
+    // 🔙 Revenir au menu principal
+    window.goBack = function() {
+        document
+            .querySelectorAll("#jailbreak-section, #modding-section")
+            .forEach((sec) => sec.classList.add("hidden"));
+        document.getElementById("main-menu").classList.remove("hidden");
+    };
 
-        // 🌐 Ouvrir un lien
-        function openLink(url) {
-            window.open(url, "_blank");
-        }
+    // 🌐 Ouvrir un lien externe dans un nouvel onglet
+    window.openLink = function(url) {
+        window.open(url, "_blank");
+    };
 
-        // 📂 Gestion des sous-menus
-        document.querySelectorAll('.modding-btn').forEach(btn => {
-            btn.addEventListener('click', e => {
-                const submenu = btn.nextElementSibling;
-                if (submenu) submenu.classList.toggle('hidden');
-                e.stopPropagation();
-            });
+    // 📂 Gestion des sous-menus Modding
+    const moddingButtons = document.querySelectorAll(".modding-btn");
+    moddingButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const submenu = btn.nextElementSibling;
+            if (submenu) submenu.classList.toggle("hidden");
         });
+    });
 
-        document.querySelectorAll('.sub-btn').forEach(btn => {
-            btn.addEventListener('click', e => {
-                const submenu = btn.nextElementSibling;
-                if (submenu) submenu.classList.toggle('hidden');
-                e.stopPropagation();
-            });
+    // 📂 Gestion des sous-sous-menus (Backup -> V1, etc.)
+    const subButtons = document.querySelectorAll(".sub-btn");
+    subButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const submenu = btn.nextElementSibling;
+            if (submenu) submenu.classList.toggle("hidden");
         });
-    </script>
-</body>
-</html>
+    });
+});
+</script>
