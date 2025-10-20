@@ -112,7 +112,7 @@
 
         <div class="category">
             <a href="https://store.brewology.com/ahomebrew.php?brewid=320" target="_blank">
-                <button class="main-btn">zukostore no viruses</button>
+                <button class="main-btn">pkgi PS3</button>
             </div>
         </div>
     </div>
